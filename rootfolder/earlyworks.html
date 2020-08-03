@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Elizabeth J. Peak Art</title>
+  <meta chartset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="vue.js" charset="utf-8"></script>
+  <script src="https://use.fontawesome.com/bb7011fb1c.js"></script>
+
+</head>
+
+<header>
+  <nav>
+    <h4 class="logo">Elizabeth Peak</h4>
+    <ul class="nav-links">
+      <li><a href="/index.html">Recent Works</a></li>
+      <li><a href="/earlyworks.html">Early Works</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/resume.html">Resume</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <h1>Recent Works</h1>
+
+  <div id="app">
+    <!-- BIG IMAGE -->
+    <div class="gallery-container">
+      <div class="gallery">
+        <div class="big-container">
+          <span class="prev" @click="updateImage(selectedImage - 1)"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+          <span class="next" @click="updateImage(selectedImage + 1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          <img :src="images[selectedImage].src" :alt="images[selectedImage].caption" class="gallery-img" />
+          <!-- CAPTION -->
+          <div class="caption">
+            <p>{{ images[selectedImage].caption }}</p>
+          </div>
+          <div><a href="contact.html" class="button">Order Print</a></div>
+        </div>
+      </div>
+      <!-- THUMBNAILS-->
+      <div class="image-list">
+        <ul>
+          <li v-for="(image, index) in images" :key="index">
+            <img @click="updateImage(index)" :src="image.src" :alt="image.caption" :class="`list-img ${index === selectedImage ? 'active' : ''}`" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    new Vue({
+      el: "#app",
+      data() {
+        return {
+          selectedImage: 0,
+          images: [{
+              src: "/images/1996 - Stormy, etching, 9.75 x 9.75 in, 1996, $300.jpg",
+              caption: "Stormy, etching, 9.75 x 9.75 in, 1996, $300"
+            },
+            {
+              src: "/images/1996 - Lionel Sleeping, etching, 11.75 x 10.75 in, 1996, $300.jpg",
+              caption: "Lionel Sleeping, etching, 11.75 x 10.75 in, 1996, $300"
+            },
+
+            {
+              src: "/images/1996 - Animals, 11.75 x 10 .75 in, 1996, $250.jpg",
+              caption: "Animals, 11.75 x 10 .75 in, 1996, $250"
+            },
+
+            {
+              src: "/images/1995 - Z is for Zebra, etching, 7.5 x 7.5 in, 1995, $250.jpg",
+              caption: "Z is for Zebra, etching, 7.5 x 7.5 in, 1995, $250"
+            },
+
+            {
+              src: "/images/1995 - Tiger, etching, 7.5 x 7.5 in, 1995, $200.jpg",
+              caption: "Tiger, etching, 7.5 x 7.5 in, 1995, $200"
+            },
+            {
+              src: "/images/1992 - Olympia II, color etching, 28 x 28 in, 1992, $1250.jpg",
+              caption: "Olympia II, color etching, 28 x 28 in, 1992, $1250"
+            },
+            {
+              src: "/images/1992 - Approaching the Rockies, etching, 22 x 60 in, 1992, $1200.jpg",
+              caption: "Approaching the Rockies, etching, 22 x 60 in, 1992, $1200"
+            },
+            {
+              src: "/images/1991 - Roller Coaster Road, Hershey, NE, color etching, 24 x 35 in, 1991, $750.jpg",
+              caption: "Roller Coaster Road, Hershey, NE, color etching, 24 x 35 in, 1991, $750s"
+            },
+            {
+              src: "/images/1990 - Olympia I, color etching, 28 x 28 in, 1990, $800.jpg",
+              caption: "Olympia I, color etching, 28 x 28 in, 1990, $800"
+            },
+            {
+              src: "/images/1988 - Backyard at Noon, Falls Church, VA, line etching, 18 x 20 in, 1988, $300.jpg",
+              caption: "Backyard at Noon, Falls Church, VA, line etching, 18 x 20 in, 1988, $300"
+            },
+            {
+              src: "/images/1987 - View of a City, Worcester, MA, line etching, 24 x 35 in, 1987, $650.jpg",
+              caption: "View of a City, Worcester, MA, line etching, 24 x 35 in, 1987, $650"
+            },
+            {
+              src: "/images/1987 - The Big Tree, color etching, 18 x 21 in, 1987, $300.jpg",
+              caption: "The Big Tree, color etching, 18 x 21 in, 1987, $300"
+            },
+            {
+              src: "/images/1986 - High Plains, Nebraska, oil monotype, 40 x 30 in, 1986, $2500.jpg",
+              caption: "High Plains, Nebraska, oil monotype, 40 x 30 in, 1986, $2500"
+            },
+            {
+              src: "/images/1986 - Blue Sky, Cincinnati, OH, three plate color etching, 17 x 15 in, 1986, $350.jpg",
+              caption: "Blue Sky, Cincinnati, OH, three plate color etching, 17 x 15 in, 1986, $350"
+            },
+            {
+              src: "/images/1985 - Q Street, Washington, DC, monoprint, 18 x 30, in 1985, $1250.jpg",
+              caption: "Q Street, Washington, DC, monoprint, 18 x 30, in 1985, $1250"
+            },
+            {
+              src: "/images/1985 - Connecticut Avenue, Washington, DC, monotype, 27 x 21 in, 1985, $1200.jpg",
+              caption: "Connecticut Avenue, Washington, DC, monotype, 27 x 21 in, 1985, $1200"
+            },
+            {
+              src: "/images/1985 - Connecticut Avenue, Washington, DC, etching aquatint, 27 x 21 in, 1985, $550.jpg",
+              caption: "Connecticut Avenue, Washington, DC, etching aquatint, 27 x 21 in, 1985, $550"
+            },
+            {
+              src: "/images/1984 - North Platte Railroad Yard, Nebraska, etching, 24 x 28 in, 1984, $450.jpg",
+              caption: "North Platte Railroad Yard, Nebraska, etching, 24 x 28 in, 1984, $450"
+            },
+            {
+              src: "/images/1982 - Maine Roadway, etching, 12 x 20, 1982, $350.jpg",
+              caption: "Maine Roadway, etching, 12 x 20, 1982, $350"
+            },
+            {
+              src: "/images/1982 - Fifth Avenue, NYC, etching, 24 x 36 in, 1982, $500.jpg",
+              caption: "Fifth Avenue, NYC, etching, 24 x 36 in, 1982, $500"
+            },
+            {
+              src: "/images/1982 - Corner, NYC, two plate color etching, 1982, $450.jpg",
+              caption: "Corner, NYC, two plate color etching, 1982, $450"
+            },
+            {
+              src: "/images/1981 - Pumps, Santa Barbara, CA, aquatint, 15 x 17 in, 1981, $350.jpg",
+              caption: "Pumps, Santa Barbara, CA, aquatint, 15 x 17 in, 1981, $350"
+            },
+            {
+              src: "/images/1980 - Ortega Street, Santa Barbara, CA, line etching on zinc, 24 x 36, 1980, $500.jpg",
+              caption: "Ortega Street, Santa Barbara, CA, line etching on zinc, 24 x 36, 1980, $500"
+            },
+            {
+              src: "/images/1980 - Meeting House, Kent, OH, etching, 18 x 20, 1980, $350.jpg",
+              caption: "Meeting House, Kent, OH, etching, 18 x 20, 1980, $350"
+            },
+            {
+              src: "/images/1980 - Grain Elevator, Kent, OH, etching, 14 x 20 in, 1980.jpg",
+              caption: "Grain Elevator, Kent, OH, etching, 14 x 20 in, 1980"
+            },
+            {
+              src: "/images/1980 - Culver City, California, line etching, 18 x 35 in, 1980, $500.jpg",
+              caption: "Culver City, California, line etching, 18 x 35 in, 1980, $500"
+            },
+            {
+              src: "/images/1978 - Elevated Freeway, Fulton Street, NYC, line etching on zinc, 19 x 14 in, 1978, $350.jpg",
+              caption: "Elevated Freeway, Fulton Street, NYC, line etching on zinc, 19 x 14 in, 1978, $350"
+            },
+            {
+              src: "/images/1975 - Table and Lamp, line etching on zinc, 17.75 x 23.75 in, 1975, $800.jpg",
+              caption: "Table and Lamp, line etching on zinc, 17.75 x 23.75 in, 1975, $800"
+            },
+            {
+              src: "/images/1974 - Dish Drainer Aquatint, dremel engraver, 17.75 x 23.75 in, 1974.jpg",
+              caption: "Dish Drainer Aquatint, dremel engraver, 17.75 x 23.75 in, 1974"
+            }
+          ]
+        };
+      },
+      methods: {
+        updateImage(index = 0) {
+          if (index === -1) {
+            this.selectedImage = this.images.length - 1;
+            return;
+          }
+          if (index === this.images.length) {
+            this.selectedImage = 0;
+            return;
+          }
+          this.selectedImage = index;
+        }
+      }
+    });
+  </script>
+
+</body>
+
+<script src="main.js"></script>
+
+
+</html>
