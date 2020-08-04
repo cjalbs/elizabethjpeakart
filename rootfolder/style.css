@@ -166,8 +166,8 @@ nav {
 
 /* GALLERY */
 .gallery-container {
-  padding-left: 6em;
-  padding-right: 6em;
+  padding-left: 7em;
+  padding-right: 7em;
   border-radius: 5px;
   width: 100%;
   height: auto;
@@ -291,7 +291,7 @@ img.active {}
 
 #education-list li {
   list-style: none;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
 }
 
@@ -307,7 +307,7 @@ img.active {}
 /* RESUME */
 .resume-container {
   display: block;
-  width: 80%;
+  width: 70%;
   margin: 0em auto;
   text-align: center;
 }
