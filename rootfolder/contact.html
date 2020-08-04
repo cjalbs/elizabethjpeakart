@@ -50,16 +50,17 @@
 <body>
   <h1>Contact</h1>
   <main>
-    <p class="contact-welcome">
+    <h2>
       Please use this form to reach Elizabeth Peak for orders or general inquiries.
-    </p>
+    </h2>
 
     <div class="contact-container">
-      <form class="contact-form" action="mail.php" method="POST">
-        <input id="mail-name" type="text" name="name" placeholder="Full Name">
-        <input id="mail-email" type="text" name="mail" placeholder="E-Mail">
-        <textarea id="mail-message" name="message" placeholder="Message"></textarea>
-        <button id="mail-submit" type="submit" value="Submit">Send</button>
+      <form class="contact-form" action="contactform.php" method="post">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="mail" placeholder="Your E-Mail" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <button type="submit" value="Submit">Send</button>
         <p class="form-message"></p>
       </form>
     </div>

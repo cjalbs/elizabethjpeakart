@@ -41,7 +41,8 @@ h2 {
   font-size: 1em;
   font-weight: 500;
   text-align: center;
-  padding: 1em 0;
+  padding: 1em 1em;
+  line-height: 1.5;
 }
 
 h3 {
@@ -325,11 +326,6 @@ img.active {}
 }
 
 /* CONTACT FORM */
-.contact-welcome {
-  font-size: 1em;
-  text-align: center;
-  padding: 1em;
-}
 
 .contact-container {
   display: block;
@@ -538,11 +534,7 @@ button:hover {
 /* MOBILE */
 @media screen and (max-width: 500px) {
   h1 {
-    padding: 12px 0;
-  }
-
-  h2 {
-    font-size: 14px;
+    padding: 14px 0;
   }
 
   p {
