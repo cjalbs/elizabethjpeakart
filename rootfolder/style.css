@@ -15,6 +15,8 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #fcfcfc;
+  color: #0c0c0c;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -26,7 +28,6 @@ body {
 }
 
 h1 {
-  font-family: "Raleway", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   text-transform: capitalize;
@@ -37,7 +38,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Raleway", sans-serif;
   font-size: 1em;
   font-weight: 500;
   text-align: center;
@@ -45,24 +45,20 @@ h2 {
 }
 
 h3 {
-  font-family: "Raleway", sans-serif;
   font-size: 1.5em;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   padding: 0;
 }
 
 h4 {
-  font-family: "Raleway", sans-serif;
   font-size: 1.5em;
-  font-weight: 600;
-  color: #1e1f26;
+  font-weight: 500;
   text-transform: capitalize;
 }
 
 p {
-  font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-weight: 300;
   text-align: left;
@@ -115,43 +111,6 @@ figcaption {
   margin: 15px 0px;
 }
 
-/*LANDING PAGE*/
-.welcome-flex-container {
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-
-.welcome-row {
-  margin: 4em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  height: auto;
-  background-color: hsl(0, 0%, 96%);
-  border-radius: 5px;
-}
-
-#welcome-logo {
-  background-color: none;
-  font-size: 2.5em;
-  font-weight: 300;
-  text-align: center;
-}
-
-#welcome-img {
-  display: block;
-  margin: auto;
-  padding: 2em;
-  width: 60%;
-  height: auto;
-  text-align: center;
-  height: auto;
-  border-radius: 5px;
-}
-
 /* FULLVIEW NAV */
 nav {
   width: 100%;
@@ -175,7 +134,7 @@ nav {
 }
 
 .nav-links a {
-  color: #1e1f26;
+  color: #0c0c0c;
   text-decoration: none;
   font-weight: 600;
   font-size: 13px;
@@ -187,7 +146,7 @@ nav {
 }
 
 .nav-links a:hover, a:active {
-  color: #1e1f26;
+  color: #0c0c0c;
   background-color: #d1f9c7;
 }
 
@@ -206,8 +165,8 @@ nav {
 
 /* GALLERY */
 .gallery-container {
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 6em;
+  padding-right: 6em;
   border-radius: 5px;
   width: 100%;
   height: auto;
@@ -269,7 +228,7 @@ nav {
   font-family: "Raleway";
   text-align: center;
   padding-top: 1em;
-  color: #1e1f26;
+  color: #0c0c0c;
 }
 
 .caption p {
@@ -360,90 +319,70 @@ img.active {}
 
 .resume-list li {
   text-align: left;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.5;
   margin-left: 3em;
 }
 
 /* CONTACT FORM */
-#contact-welcome {
-  font-size: 14px;
+.contact-welcome {
+  font-size: 1em;
   text-align: center;
   padding: 1em;
 }
 
-.vue-form {
+.contact-container {
+  display: block;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  background-color: #3f3f3f;
+  font-family: "Raleway";
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+.contact-form {
   display: block;
   text-align: left;
-  width: 50%;
+  width: 100%;
   margin: 40px auto;
   background-color: #f4f4f4;
   font-family: "Raleway";
   font-size: 14px;
   border-radius: 5px;
+  padding: 40px;
 }
 
-.vue-form fieldset {
-  border-radius: 8px;
-  border: none;
-}
-
-.vue-form div {
-  position: relative;
-  margin: 20px;
-}
-
-.vue-form h4,
-.vue-form .label {
-  color: #1e1f26;
-  margin-bottom: 10px;
-}
-
-.vue-form .label {
-  display: block;
-}
-
-.vue-form input,
-.vue-form textarea,
-.vue-form label {
-  color: #2b3e51;
-}
-
-.vue-form input[type="text"],
-.vue-form input[type="email"],
-.vue-form textarea {
-  display: block;
+input[type="text"],
+select,
+textarea {
+  box-sizing: border-box;
   width: 100%;
-  appearance: none;
-}
-
-.vue-form input[type="text"],
-.vue-form input[type="email"],
-.vue-form textarea {
+  padding: 14px;
+  border: 2px solid #ccc;
+  margin-top: 2px;
+  margin-bottom: 14px;
+  text-transform: none;
+  resize: none;
   font-family: "Raleway";
   font-size: 14px;
-  padding: 12px;
-  border: 1px solid #cfd9db;
-  background-color: #ffffff;
-  border-radius: 0.25em;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
 }
 
-.vue-form textarea {
-  min-height: 120px;
-  resize: vertical;
-  overflow: auto;
-  font-family: "Raleway";
-  font-size: 14px;
+input[name="message"],
+textarea {
+  height: 150px;
 }
 
-.vue-form input[type="submit"] {
+button[type="submit"]{
   display: block;
   font-family: "Raleway";
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1em;
-  width: 25%;
+  width: 50%;
   height: auto;
   border: 0;
   margin: 1em auto;
@@ -454,38 +393,22 @@ img.active {}
   border-radius: 3px;
 }
 
-.vue-form input[type="submit"]:hover {
+button:hover {
   background-color: #d1f9c7;
+  color: #0c0c0c;
   cursor: pointer;
 }
 
-.vue-form input[type="submit"]:focus {
-  background-color: #d1f9c7;
-  cursor: pointer;
+.form-error {
+  color: #0c0c0c;
 }
 
-.vue-form input[type="submit"]:active {
-  background-color: #d1f9c7;
-  cursor: pointer;
+.form-success {
+  color: #0c0c0c;
 }
 
-.vue-form .error-message {
-  height: 40px;
-  margin: 0px;
-}
-
-.vue-form .error-message p {
-  background: #383838;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1em;
-  text-align: center;
-  border-radius: 4px;
-  padding: 16px;
-}
-
-.vue-form .error {
-  border-color: #e94b35 !important;
+.input-error {
+  box-shadow: 0 0 5px #d1f9c7;
 }
 
 /* MOBILE STYLES BEGIN */
@@ -563,7 +486,7 @@ img.active {}
   }
 
   .nav-links a {
-    color: #1e1f26;
+    color: #0c0c0c;
     background-color: #d1f9c7;
     font-size: 16px;
     padding: 2em 4em;
@@ -607,7 +530,7 @@ img.active {}
     margin-left: 4em;
   }
 
-  .vue-form {
+  .contact-container {
     width: 70%;
   }
 }
@@ -685,13 +608,6 @@ img.active {}
     width: 90%;
     font-size: 12px;
   }
-
-  input[type="text"],
-  select,
-  textarea {
-    font-size: 12px;
-  }
-}
 
 /* -------- DON'T CHANGE -------- */
 .nav-active {
