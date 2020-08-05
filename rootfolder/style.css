@@ -339,7 +339,7 @@ img.active {}
   font-family: "Raleway";
   font-size: 14px;
   border-radius: 5px;
-  padding: 0px;
+  padding: 0px 2em;
 }
 
 .contact-form {
@@ -439,9 +439,10 @@ button:hover {
 
 /* Kindle/iPad portrait */
 @media screen and (max-width: 800px) {
-  body {
+  html, body {
     overflow-x: hidden;
     padding: 0;
+    margin-bottom: 4em;
   }
 
   /* MOBILE NAV */
@@ -517,10 +518,6 @@ button:hover {
     line-height: 1.5;
     margin-left: 4em;
   }
-
-  .vue-form {
-    width: 70%;
-  }
 }
 
 /* MOBILE */
@@ -571,9 +568,9 @@ button:hover {
   }
 
   .image-list li {
-    width: 6em;
-    height: 6em;
-    margin: 2px;
+    width: 6.5em;
+    height: 6.5em;
+    margin: 3px;
   }
 
   .about-container {
