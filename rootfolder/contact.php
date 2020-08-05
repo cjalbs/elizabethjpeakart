@@ -18,7 +18,7 @@
       <li><a href="/earlyworks.html">Early Works</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/resume.html">Resume</a></li>
-      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/index.php">Contact</a></li>
     </ul>
     <div class="burger">
       <div class="line1"></div>
@@ -41,7 +41,7 @@
         <input type="text" name="mail" placeholder="Your E-Mail" required>
         <input type="text" name="subject" placeholder="Subject" required>
         <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit" value="Submit">Send</button>
+        <button type="submit" name="submit">Send</button>
       </form>
     </div>
 
