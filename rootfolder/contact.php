@@ -8,6 +8,27 @@
   <link rel="stylesheet" href="style.css">
   <script src="vue.js" charset="utf-8"></script>
   <script src="https://use.fontawesome.com/bb7011fb1c.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $("form").submit(function(event) {
+        event.preventDefault();
+        var name = $("#mail-name").val();
+        var email = $("#mail-email").val();
+        var subject = $("#mail-subject").val();
+        var message = $("#mail-message").val();
+        var submit = $("#mail-submit").val();
+        $(".form-message").load("contactform.php", {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+          submit: submit
+        });
+      });
+    });
+  </script>
+
 </head>
 
 <header>
@@ -18,7 +39,7 @@
       <li><a href="/earlyworks.html">Early Works</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/resume.html">Resume</a></li>
-      <li><a href="/index.php">Contact</a></li>
+      <li><a href="/contact.php">Contact</a></li>
     </ul>
     <div class="burger">
       <div class="line1"></div>
@@ -37,11 +58,12 @@
 
     <div class="contact-container">
       <form class="contact-form" action="contactform.php" method="post">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="text" name="mail" placeholder="Your E-Mail" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit" name="submit">Send</button>
+        <input id="mail-name" type="text" name="name" placeholder="Full Name">
+        <input id="mail-email" type="text" name="mail" placeholder="Your E-Mail">
+        <input id="mail-subject" type="text" name="subject" placeholder="Subject">
+        <textarea id="mail-message" name="message" placeholder="Message"></textarea>
+        <button id="mail-submit" type="submit" name="submit">Send</button>
+        <p class="form-message"></p>
       </form>
     </div>
 
