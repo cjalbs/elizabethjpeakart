@@ -455,7 +455,7 @@ button:hover {
     position: absolute;
     right: 0px;
     top: 4em;
-    height: calc(100vh - 4em);
+    height: 50%;
     width: 100%;
     background-color: #f4f4f4;
     display: flex;
@@ -478,7 +478,7 @@ button:hover {
     color: #1e1f26;
     background-color: #d1f9c7;
     font-size: 16px;
-    padding: 2em 4em;
+    padding: .8em 4em;
   }
 
   .nav-links a:active {
@@ -522,6 +522,7 @@ button:hover {
 
 /* MOBILE */
 @media screen and (max-width: 500px) {
+
   h1 {
     padding: 12px 0;
   }
@@ -535,9 +536,6 @@ button:hover {
     text-align: center;
   }
 
-  .nav-links a {
-    padding: 1em 2em;
-  }
 
   /* GALLERY */
   .gallery-container {
