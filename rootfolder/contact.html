@@ -8,25 +8,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="vue.js" charset="utf-8"></script>
   <script src="https://use.fontawesome.com/bb7011fb1c.js"></script>
-
-  <script>
-    $(document).ready(function() {
-      $("form").submit(function(event) {
-        event.preventDefault();
-        var name = $("#mail-name").val();
-        var email = $("#mail-email").val();
-        var message = $("#mail-message").val();
-        var submit = $("#mail-submit").val();
-        $("form-message").load("mail.php", {
-          name: name,
-          email: email,
-          message: message,
-          submit: submit
-        });
-      });
-    });
-  </script>
-
 </head>
 
 <header>
@@ -56,10 +37,10 @@
 
     <div class="contact-container">
       <form class="contact-form" action="contactform.php" method="post">
-        <input type="text" name="name" placeholder="Full Name">
-        <input type="text" name="mail" placeholder="Your E-Mail">
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="message" placeholder="Message"></textarea>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="mail" placeholder="Your E-Mail" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Message" required></textarea>
         <button type="submit" value="Submit">Send</button>
       </form>
     </div>
