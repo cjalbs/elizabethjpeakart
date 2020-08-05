@@ -15,8 +15,6 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #fcfcfc;
-  color: #0c0c0c;
-  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -24,10 +22,11 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #fcfcfc;
   color: #0c0c0c;
-  padding-bottom: 2em;
+  padding-bottom: 6em;
 }
 
 h1 {
+  font-family: "Raleway", sans-serif;
   font-size: 1.5em;
   font-weight: 600;
   text-transform: capitalize;
@@ -38,28 +37,32 @@ h1 {
 }
 
 h2 {
+  font-family: "Raleway", sans-serif;
   font-size: 1em;
   font-weight: 500;
   text-align: center;
-  padding: 1em 1em;
-  line-height: 1.5;
+  padding: 1em 0;
 }
 
 h3 {
+  font-family: "Raleway", sans-serif;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   padding: 0;
 }
 
 h4 {
+  font-family: "Raleway", sans-serif;
   font-size: 1.5em;
-  font-weight: 500;
+  font-weight: 600;
+  color: #1e1f26;
   text-transform: capitalize;
 }
 
 p {
+  font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-weight: 300;
   text-align: left;
@@ -135,10 +138,10 @@ nav {
 }
 
 .nav-links a {
-  color: #0c0c0c;
+  color: #1e1f26;
   text-decoration: none;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   padding: 6px 10px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
@@ -147,7 +150,7 @@ nav {
 }
 
 .nav-links a:hover, a:active {
-  color: #0c0c0c;
+  color: #1e1f26;
   background-color: #d1f9c7;
 }
 
@@ -166,8 +169,8 @@ nav {
 
 /* GALLERY */
 .gallery-container {
-  padding-left: 7em;
-  padding-right: 7em;
+  padding-left: 6em;
+  padding-right: 6em;
   border-radius: 5px;
   width: 100%;
   height: auto;
@@ -229,7 +232,7 @@ nav {
   font-family: "Raleway";
   text-align: center;
   padding-top: 1em;
-  color: #0c0c0c;
+  color: #1e1f26;
 }
 
 .caption p {
@@ -261,8 +264,8 @@ nav {
   align-content: center;
   justify-content: center;
   padding: 10px;
-  width: 7em;
-  height: 7em;
+  width: 8em;
+  height: 8em;
   margin: 3px;
   overflow: hidden;
   border-radius: 3px;
@@ -292,7 +295,7 @@ img.active {}
 #education-list li {
   list-style: none;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 #about-img {
@@ -307,7 +310,7 @@ img.active {}
 /* RESUME */
 .resume-container {
   display: block;
-  width: 70%;
+  width: 80%;
   margin: 0em auto;
   text-align: center;
 }
@@ -320,7 +323,7 @@ img.active {}
 
 .resume-list li {
   text-align: left;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.5;
   margin-left: 3em;
 }
@@ -395,18 +398,6 @@ button:hover {
   cursor: pointer;
 }
 
-.form-error {
-  color: #0c0c0c;
-}
-
-.form-success {
-  color: #0c0c0c;
-}
-
-.input-error {
-  box-shadow: 0 0 5px #d1f9c7;
-}
-
 /* MOBILE STYLES BEGIN */
 /* iPad landscape */
 @media screen and (max-width: 1024px) {
@@ -455,10 +446,11 @@ button:hover {
 
   /* MOBILE NAV */
   nav {
-    z-index: 100;
+    z-index: 10;
   }
 
   .nav-links {
+    z-index: 100;
     position: absolute;
     right: 0px;
     top: 4em;
@@ -482,7 +474,7 @@ button:hover {
   }
 
   .nav-links a {
-    color: #0c0c0c;
+    color: #1e1f26;
     background-color: #d1f9c7;
     font-size: 16px;
     padding: 2em 4em;
@@ -526,7 +518,7 @@ button:hover {
     margin-left: 4em;
   }
 
-  .contact-container {
+  .vue-form {
     width: 70%;
   }
 }
@@ -534,11 +526,7 @@ button:hover {
 /* MOBILE */
 @media screen and (max-width: 500px) {
   h1 {
-    padding: 14px 0;
-  }
-
-  p {
-    font-size: 12px;
+    padding: 12px 0;
   }
 
   figcaption {
@@ -600,6 +588,13 @@ button:hover {
     width: 90%;
     font-size: 12px;
   }
+
+  input[type="text"],
+  select,
+  textarea {
+    font-size: 12px;
+  }
+}
 
 /* -------- DON'T CHANGE -------- */
 .nav-active {

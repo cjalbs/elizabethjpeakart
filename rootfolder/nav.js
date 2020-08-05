@@ -1,5 +1,3 @@
-/* burger nav */
-
 console.clear();
 const navSlide = () => {
   const burger = document.querySelector(".burger");

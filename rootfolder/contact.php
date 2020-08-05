@@ -3,11 +3,12 @@
 
 <head>
   <title>Elizabeth J. Peak Art</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="vue.js" charset="utf-8"></script>
   <script src="https://use.fontawesome.com/bb7011fb1c.js"></script>
+
 </head>
 
 <header>
@@ -18,7 +19,7 @@
       <li><a href="/earlyworks.html">Early Works</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/resume.html">Resume</a></li>
-      <li><a href="/index.php">Contact</a></li>
+      <li><a href="/contact.php">Contact</a></li>
     </ul>
     <div class="burger">
       <div class="line1"></div>
@@ -30,24 +31,23 @@
 
 <body>
   <h1>Contact</h1>
-  <main>
     <h2>
       Please use this form to reach Elizabeth Peak for orders or general inquiries.
     </h2>
 
     <div class="contact-container">
       <form class="contact-form" action="contactform.php" method="post">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="text" name="mail" placeholder="Your E-Mail" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" placeholder="Message" required></textarea>
-        <button type="submit" name="submit">Send</button>
+        <input id="mail-name" type="text" name="name" placeholder="Full Name" required>
+        <input id="mail-email" type="text" name="mail" placeholder="Your E-Mail" required>
+        <input id="mail-subject" type="text" name="subject" placeholder="Subject" required>
+        <textarea id="mail-message" name="message" placeholder="Message" required></textarea>
+        <button id="mail-submit" type="submit" name="submit">Send</button>
+        <p class="form-message"></p>
       </form>
     </div>
 
-
 </body>
 
-<script src="main.js"></script>
+<script src="nav.js"></script>
 
 </html>
